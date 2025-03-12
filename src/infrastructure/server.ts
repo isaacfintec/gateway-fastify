@@ -1,7 +1,7 @@
 import app from '../infrastructure/app'
 import { normalizePort } from './utils/functions'
 
-const PORT = normalizePort(process.env.PORT)
+const PORT = normalizePort(process.env.PORT || '8080')
 
 /**
  * APP global events
@@ -31,7 +31,7 @@ app.setErrorHandler((error, req, reply) => {
   })
 })
 
-app.listen({ port: PORT }, () => {
+app.listen({ port: PORT, host: '0.0.0.0' }, () => {
   console.info(`Server running on port ${PORT}`)
 })
 

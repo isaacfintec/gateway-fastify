@@ -12,7 +12,8 @@
     "test": "env NODE_ENV=test jest",
     "test:dev": "env NODE_ENV=test jest --watch",
     "start": "node ./dist/infrastructure/server.js",
-    "local": "nodemon --watch . --ext ts --exec ts-node src/infrastructure/server.ts"
+    "local": "nodemon --watch . --ext ts --exec ts-node src/infrastructure/server.ts",
+    "postinstall": "npx npm-run-all transpile"
   },
   "keywords": [],
   "author": "",

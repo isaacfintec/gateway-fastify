@@ -1,4 +1,4 @@
-const axios = require('axios')
+import axios from 'axios'
 
 export const BASE_URLs = {
   qa: 'https://148.250.10.42:50996',
@@ -10,7 +10,7 @@ const getHttpClient = (env) => {
   console.log({ baseURL })
   return axios.create({
     baseURL, 
-    timeout: 10000
+    timeout: 10000,
   })
 }
 
